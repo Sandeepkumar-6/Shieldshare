@@ -21,25 +21,44 @@ ShieldShare is a Node.js and MongoDB backend for secure file sharing workflows. 
 - Zod validation
 - Docker Compose
 
-## Project Structure
+# 📂 Project Structure
 
 ```text
-.
-├── docker-compose.yml
-├── package.json
-├── server
-│   ├── package.json
-│   └── src
-│       ├── app.js
-│       ├── index.js
-│       ├── config
-│       ├── middleware
-│       ├── models
-│       ├── routes
-│       ├── services
-│       └── utils
-└── .env.example
-```
+ShieldShare/
+│
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── admin/
+│   │   ├── services/
+│   │   └── App.jsx
+│   └── package.json
+│
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── File.js
+│   │   ├── Activity.js
+│   │   ├── Alert.js
+│   │   └── FileVersion.js
+│   │
+│   ├── routes/
+│   ├── middleware/
+│   ├── services/
+│   │   ├── hashService.js
+│   │   ├── detectionEngine.js
+│   │   ├── riskEngine.js
+│   │   ├── quarantineService.js
+│   │   └── recoveryService.js
+│   │
+│   ├── uploads/
+│   ├── quarantine/
+│   └── server.js
+│
+└── README.md
+
 
 ## Getting Started
 
@@ -105,6 +124,48 @@ See `.env.example` for the local development defaults.
 | `CORS_ORIGINS` | Comma-separated allowed origins |
 | `MAX_FILE_SIZE_MB` | Maximum file size setting |
 | `ENABLE_SIMULATION` | Enables simulation features |
+
+## 🏗️ System Workflow
+
+```text
+                 ┌──────────────────────┐
+                 │      React UI        │
+                 │  User / Admin Panel  │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │   Node.js + Express  │
+                 │       REST API       │
+                 └──────────┬───────────┘
+                            │
+             ┌──────────────┼──────────────┐
+             ▼              ▼              ▼
+        ┌──────────┐   ┌──────────┐   ┌──────────────┐
+        │ MongoDB  │   │   File   │   │   Activity   │
+        │ Database │   │ Storage  │   │   Monitor    │
+        └──────────┘   └──────────┘   └──────┬───────┘
+                                             │
+                                             ▼
+                                  ┌────────────────────┐
+                                  │ Detection Engine   │
+                                  │ + Risk Assessment  │
+                                  └─────────┬──────────┘
+                                            │
+                           ┌────────────────┴────────────────┐
+                           ▼                                 ▼
+                     SAFE ACTIVITY                    SUSPICIOUS
+                           │                                 │
+                           ▼                                 ▼
+                    Normal Access                      Containment
+                                                             │
+                              ┌────────────────────────────────┤
+                              ▼                ▼               ▼
+                           Freeze           Alert         Quarantine
+                              │
+                              ▼
+                         File Recovery
+
 
 ## Scripts
 
