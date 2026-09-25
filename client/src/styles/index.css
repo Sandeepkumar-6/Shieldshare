@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+/*
+  ShieldShare design system (frontend skill §5–§10, §30).
+
+  Skill token          → Tailwind token here        → example class
+  background           → --color-bg                 → bg-bg
+  background-secondary → --color-bg-secondary       → bg-bg-secondary
+  surface              → --color-surface            → bg-surface
+  surface-elevated     → --color-surface-elevated   → bg-surface-elevated
+  surface-hover        → --color-surface-hover      → bg-surface-hover
+  border               → --color-line               → border-line
+  border-subtle        → --color-line-subtle        → border-line-subtle
+  text-primary         → --color-fg                 → text-fg
+  text-secondary       → --color-fg-secondary       → text-fg-secondary
+  text-muted           → --color-fg-muted           → text-fg-muted
+  accent / success / warning / danger / critical / info → same names
+
+  Themes: dark is the default identity; light is opt-in (Topbar toggle, stored per browser,
+  applied as <html data-theme="light">). Components only use tokens, so both themes share one
+  design system. Every tone keeps readable contrast on its own background in both themes.
+
+  Severity: SAFE → success, SUSPICIOUS → warning, HIGH → danger (orange), CRITICAL → critical
+  (red), INFO → info. Colour is never the only signal: badges always carry a text label.
+
+  Typography: the platform UI font (Segoe UI Variable / SF Pro), so no third-party font CDN
+  sees ShieldShare visitors; a system monospace only for hashes, IDs, IPs and timestamps.
+*/
+
+@theme {
+  --font-sans: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "SF Pro Text", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "SF Pro Display", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Mono", "SF Mono", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Dark (default): layered, slightly warm-cool neutrals rather than flat black */
+  --color-bg: #0d1117;
+  --color-bg-secondary: #10151d;
+  --color-surface: #151b24;
+  --color-surface-elevated: #1b2330;
+  --color-surface-hover: #222c3a;
+  --color-line: #2c3747;
+  --color-line-subtle: #1f2834;
+
+  --color-fg: #e9edf2;
+  --color-fg-secondary: #aeb8c5;
+  --color-fg-muted: #7d8898;
+
+  /* One friendly, calm accent for interaction: links, focus, primary action, active nav */
+  --color-accent: #6ea8fe;
+  --color-accent-hover: #8dbbff;
+  --color-accent-contrast: #061426;
+
+  /* Security semantics */
+  --color-success: #44bd84;
+  --color-warning: #e2b650;
+  --color-danger: #ef8d4b;
+  --color-critical: #f0645e;
+  --color-critical-contrast: #1d0605; /* text on a critical fill (danger button): 6.3:1 */
+  --color-info: #79aaf5;
+
+  /* Radius by hierarchy: controls < cards < dialogs */
+  --radius-control: 6px;
+  --radius-card: 10px;
+  --radius-dialog: 14px;
+
+  /* Type scale */
+  --text-display: 2.25rem;
+  --text-display--line-height: 2.75rem;
+  --text-title: 1.375rem;
+  --text-title--line-height: 1.875rem;
+  --text-heading: 0.9375rem;
+  --text-heading--line-height: 1.375rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.375rem;
+  --text-meta: 0.75rem;
+  --text-meta--line-height: 1.05rem;
+  --text-tech: 0.78rem;
+  --text-tech--line-height: 1.125rem;
+
+  /* Motion (skill §30): short, meaningful, never looping */
+  --animate-page-in: page-in 180ms ease-out;
+  --animate-pop-in: pop-in 160ms ease-out;
+  --animate-slide-in: slide-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-fade-in: fade-in 160ms ease-out;
+}
+
+/* Elevation tokens: borders and tone do most of the work; shadows stay quiet. */
+:root {
+  --shadow-card: 0 0 0 0 transparent;
+  --shadow-raised: 0 10px 30px -12px rgb(0 0 0 / 0.55);
+  --shadow-overlay: 0 24px 60px -20px rgb(0 0 0 / 0.7);
+  --overlay: rgb(3 6 10 / 0.62);
+}
+
+:root[data-theme="light"],
+.landing-theme {
+  color-scheme: light;
+  --color-bg: #f4f6f9;
+  --color-bg-secondary: #eceff4;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-surface-hover: #f1f4f8;
+  --color-line: #d6dce5;
+  --color-line-subtle: #e6eaf0;
+
+  --color-fg: #111827;
+  --color-fg-secondary: #475467;
+  --color-fg-muted: #667085;
+
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-contrast: #ffffff;
+
+  --color-success: #15803d;
+  --color-warning: #a15c07;
+  --color-danger: #c2410c;
+  --color-critical: #d92d20;
+  --color-critical-contrast: #ffffff;
+  --color-info: #2563eb;
+
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.05);
+  --shadow-raised: 0 12px 28px -12px rgb(16 24 40 / 0.18);
+  --shadow-overlay: 0 24px 56px -16px rgb(16 24 40 / 0.28);
+  --overlay: rgb(15 23 42 / 0.4);
+}
+
+.landing-theme {
+  color-scheme: light;
+  /* Landing stays light without changing the visitor's saved app theme. */
+  --color-bg: #f7f9fc;
+  --color-bg-secondary: #f0f4f9;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-surface-hover: #edf3fb;
+  --color-line: #cfd8e6;
+  --color-line-subtle: #e2e8f0;
+  --color-fg: #14213a;
+  --color-fg-secondary: #4b5c73;
+  --color-fg-muted: #6c7a8f;
+  --color-accent: #246bdb;
+  --color-accent-hover: #1c56b4;
+  --color-accent-contrast: #ffffff;
+  --shadow-card: 0 1px 2px rgb(24 48 82 / 0.05);
+  --shadow-raised: 0 18px 48px -24px rgb(40 73 118 / 0.28);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans text-body antialiased;
+    min-height: 100dvh;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-raised { box-shadow: var(--shadow-raised); }
+  .shadow-overlay { box-shadow: var(--shadow-overlay); }
+  .bg-overlay { background-color: var(--overlay); }
+
+  .landing-flow-card,
+  .landing-activity-row {
+    animation: landing-card-in 420ms ease-out both;
+  }
+
+  .landing-activity-row:nth-child(2) { animation-delay: 100ms; }
+  .landing-activity-row:nth-child(3) { animation-delay: 200ms; }
+
+  /* Live feed: only rows that arrive in real time enter with this (skill §21, §30). */
+  .animate-feed-in {
+    animation: feed-in 240ms ease-out;
+  }
+
+  /* Typing indicator for the assistant: three dots, stops with reduced motion. */
+  .typing-dot {
+    animation: typing 1.2s ease-in-out infinite;
+  }
+  .typing-dot:nth-child(2) { animation-delay: 0.15s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.3s; }
+}
+
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(4px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes feed-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+    background-color: color-mix(in oklab, var(--color-accent) 10%, transparent);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    background-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-2px); }
+}
+
+@keyframes landing-card-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}

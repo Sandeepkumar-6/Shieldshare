@@ -1,0 +1,37 @@
+PROJECT CHARTER: CLIENT PORTAL REFRESH
+Acme Studio (fictional demo company)
+
+Purpose
+The client portal is where customers review drafts, approve deliverables and download final
+files. The current version is four years old, slow on mobile and hard to maintain. This
+project replaces it with a faster portal that keeps the familiar review flow.
+
+Objectives
+1. Page load under two seconds on a mid-range phone.
+2. Review and approval in no more than three clicks from the project list.
+3. Expiring, permission-based share links for every deliverable.
+4. An audit trail of who viewed and downloaded each file.
+
+Scope
+In scope: project list, file review, comments, approvals, share links, notifications.
+Out of scope: invoicing, time tracking and the internal resource planner.
+
+Milestones
+- Discovery and interviews: complete by 15 August.
+- Design and prototype: complete by 12 September.
+- Release 2.0 internal testing: from 15 September.
+- Client pilot with three customers: October.
+- General availability: November, subject to pilot feedback.
+
+Roles
+Sponsor: Priya (operations). Product and design: Marcus. Engineering: Lena and Ada.
+Finance oversight: Tomas.
+
+Risks
+- Scope creep from pilot feedback. Mitigation: a single prioritised backlog, reviewed weekly.
+- Data migration errors. Mitigation: dry runs on a copy, checksums compared after each run.
+- Availability of pilot clients. Mitigation: five candidates approached, three needed.
+
+Success measures
+Pilot clients approve deliverables faster than on the old portal, support tickets about
+downloads drop by half, and no deliverable is shared without an expiry date.

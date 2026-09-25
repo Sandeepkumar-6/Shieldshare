@@ -1,0 +1,20 @@
+date,employee,category,description,amount_eur,receipt,status
+2026-09-03,Marcus Olsen,software,Stock photo credits,295.61,R-1009,pending
+2026-09-04,Mei Tanaka,travel,Hotel, one night,178.83,R-1012,approved
+2026-09-05,Tomas Ruiz,software,Stock photo credits,304.47,R-1015,approved
+2026-09-07,Mei Tanaka,supplies,Notebooks and pens,238.07,R-1021,pending
+2026-09-08,Mei Tanaka,travel,Train to client workshop,205.43,R-1024,pending
+2026-09-09,Marcus Olsen,travel,Taxi from the airport,120.01,R-1027,pending
+2026-09-13,Tomas Ruiz,supplies,Printer paper,362.01,R-1039,pending
+2026-09-15,Samir Haddad,supplies,Notebooks and pens,151.69,R-1045,approved
+2026-09-16,Samir Haddad,software,Screen recording tool,413.26,R-1048,approved
+2026-09-17,Tomas Ruiz,travel,Conference shuttle,313.00,R-1051,approved
+2026-09-18,Ada Mensah,travel,Taxi from the airport,254.09,R-1054,approved
+2026-09-19,Ada Mensah,supplies,Whiteboard markers,156.41,R-1057,approved
+2026-09-20,Samir Haddad,travel,Conference shuttle,338.96,R-1060,pending
+2026-09-21,Mei Tanaka,travel,Hotel, one night,322.58,R-1063,pending
+2026-09-24,Marcus Olsen,supplies,Notebooks and pens,246.01,R-1072,approved
+2026-09-25,Mei Tanaka,supplies,USB-C adapters,327.93,R-1075,approved
+2026-09-26,Samir Haddad,software,Font licence,290.78,R-1078,pending
+2026-09-28,Tomas Ruiz,supplies,Whiteboard markers,181.45,R-1084,approved
+2026-09-29,Marcus Olsen,meals,Client lunch,13.30,R-1087,approved

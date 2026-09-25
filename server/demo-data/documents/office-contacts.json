@@ -1,0 +1,96 @@
+{
+  "note": "Fictional contacts for the Acme Studio demo workspace. Not real people.",
+  "office": {
+    "name": "Acme Studio",
+    "city": "Exampleville",
+    "phone": "+00 000 000 000"
+  },
+  "people": [
+    {
+      "name": "Priya Nair",
+      "role": "Operations lead",
+      "email": "priya@acme.example",
+      "extension": 200,
+      "team": "operations",
+      "location": "remote"
+    },
+    {
+      "name": "Marcus Olsen",
+      "role": "Design lead",
+      "email": "marcus@acme.example",
+      "extension": 207,
+      "team": "design",
+      "location": "office"
+    },
+    {
+      "name": "Lena Hartmann",
+      "role": "Engineering lead",
+      "email": "lena@acme.example",
+      "extension": 214,
+      "team": "engineering",
+      "location": "office"
+    },
+    {
+      "name": "Tomas Ruiz",
+      "role": "Finance manager",
+      "email": "tomas@acme.example",
+      "extension": 221,
+      "team": "finance",
+      "location": "remote"
+    },
+    {
+      "name": "Ada Mensah",
+      "role": "Software engineer",
+      "email": "ada@acme.example",
+      "extension": 228,
+      "team": "engineering",
+      "location": "office"
+    },
+    {
+      "name": "Jonas Weber",
+      "role": "Account manager",
+      "email": "jonas@acme.example",
+      "extension": 235,
+      "team": "sales",
+      "location": "office"
+    },
+    {
+      "name": "Mei Tanaka",
+      "role": "Designer",
+      "email": "mei@acme.example",
+      "extension": 242,
+      "team": "design",
+      "location": "remote"
+    },
+    {
+      "name": "Samir Haddad",
+      "role": "Support specialist",
+      "email": "samir@acme.example",
+      "extension": 249,
+      "team": "support",
+      "location": "office"
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "Paper & Ink Co.",
+      "contact": "accounts1@supplier.example",
+      "category": "stationery"
+    },
+    {
+      "name": "Northline Printing",
+      "contact": "accounts2@supplier.example",
+      "category": "printing"
+    },
+    {
+      "name": "Cloud Hosting Ltd",
+      "contact": "accounts3@supplier.example",
+      "category": "hosting"
+    },
+    {
+      "name": "Office Coffee Service",
+      "contact": "accounts4@supplier.example",
+      "category": "facilities"
+    }
+  ]
+}

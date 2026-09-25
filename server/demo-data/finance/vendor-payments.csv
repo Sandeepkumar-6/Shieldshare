@@ -1,0 +1,37 @@
+payment_id,vendor,invoice,due_date,amount_eur,method,status
+PAY-2026-301,Studio Furniture Rental,INV-4200,2026-08-05,8418.51,card,paid
+PAY-2026-302,Cloud Hosting Ltd,INV-4203,2026-10-19,4004.57,bank transfer,scheduled
+PAY-2026-303,Paper & Ink Co.,INV-4206,2026-08-11,2158.94,bank transfer,awaiting approval
+PAY-2026-304,Paper & Ink Co.,INV-4209,2026-10-20,4797.98,card,paid
+PAY-2026-305,Freelance Illustrator,INV-4212,2026-08-18,9710.29,card,scheduled
+PAY-2026-306,Paper & Ink Co.,INV-4215,2026-10-01,381.86,bank transfer,paid
+PAY-2026-307,Freelance Illustrator,INV-4218,2026-08-04,9608.49,bank transfer,paid
+PAY-2026-308,Freelance Illustrator,INV-4221,2026-08-09,6273.91,card,awaiting approval
+PAY-2026-309,Studio Furniture Rental,INV-4224,2026-10-12,2385.56,bank transfer,paid
+PAY-2026-310,Paper & Ink Co.,INV-4227,2026-10-27,3041.37,bank transfer,scheduled
+PAY-2026-311,Office Coffee Service,INV-4230,2026-09-22,6201.74,bank transfer,awaiting approval
+PAY-2026-312,Office Coffee Service,INV-4233,2026-09-19,6139.21,bank transfer,paid
+PAY-2026-313,Legal Advisors LLP,INV-4236,2026-09-13,4693.62,bank transfer,scheduled
+PAY-2026-314,Freelance Illustrator,INV-4239,2026-09-23,8926.50,bank transfer,scheduled
+PAY-2026-315,Freelance Illustrator,INV-4242,2026-09-02,5839.88,card,paid
+PAY-2026-316,Northline Printing,INV-4245,2026-09-24,6560.15,card,paid
+PAY-2026-317,Studio Furniture Rental,INV-4248,2026-08-28,4130.79,bank transfer,paid
+PAY-2026-318,Northline Printing,INV-4251,2026-08-13,7221.94,card,paid
+PAY-2026-319,Northline Printing,INV-4254,2026-10-19,8221.78,bank transfer,scheduled
+PAY-2026-320,Legal Advisors LLP,INV-4257,2026-09-21,9112.88,bank transfer,paid
+PAY-2026-321,Northline Printing,INV-4260,2026-10-08,6011.49,bank transfer,paid
+PAY-2026-322,Northline Printing,INV-4263,2026-08-11,5852.63,bank transfer,awaiting approval
+PAY-2026-323,Northline Printing,INV-4266,2026-10-22,1849.43,card,paid
+PAY-2026-324,Cloud Hosting Ltd,INV-4269,2026-08-27,2067.55,bank transfer,scheduled
+PAY-2026-325,Northline Printing,INV-4272,2026-09-05,8991.65,bank transfer,scheduled
+PAY-2026-326,Paper & Ink Co.,INV-4275,2026-09-06,7015.26,card,awaiting approval
+PAY-2026-327,Paper & Ink Co.,INV-4278,2026-10-08,8934.16,bank transfer,scheduled
+PAY-2026-328,Cloud Hosting Ltd,INV-4281,2026-08-03,4222.42,bank transfer,paid
+PAY-2026-329,Studio Furniture Rental,INV-4284,2026-09-21,2707.57,bank transfer,awaiting approval
+PAY-2026-330,Freelance Illustrator,INV-4287,2026-10-28,7929.61,bank transfer,paid
+PAY-2026-331,Office Coffee Service,INV-4290,2026-10-19,7600.56,bank transfer,paid
+PAY-2026-332,Cloud Hosting Ltd,INV-4293,2026-10-13,9615.60,bank transfer,scheduled
+PAY-2026-333,Freelance Illustrator,INV-4296,2026-09-03,9019.86,bank transfer,paid
+PAY-2026-334,Office Coffee Service,INV-4299,2026-09-20,4633.25,bank transfer,scheduled
+PAY-2026-335,Paper & Ink Co.,INV-4302,2026-10-20,4918.21,card,scheduled
+PAY-2026-336,Cloud Hosting Ltd,INV-4305,2026-09-27,7267.07,bank transfer,paid

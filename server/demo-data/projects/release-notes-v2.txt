@@ -1,0 +1,34 @@
+CLIENT PORTAL: RELEASE NOTES
+Acme Studio (fictional demo company)
+
+Version 2.0 (internal testing from 15 September 2026)
+
+New
+- Project list redesigned: the next action for each project is shown first.
+- File review with side-by-side comparison of two versions.
+- Approvals in one click, with an optional comment.
+- Share links for deliverables: view-only or download, always with an expiry date,
+  optionally protected by a password.
+- Activity log per file: who viewed, downloaded or approved it, and when.
+
+Improved
+- Pages load about 60 percent faster on mobile.
+- Large files upload in the background and can be resumed.
+- Notification emails are grouped into one daily summary.
+
+Fixed
+- Comments on the last page of a PDF no longer disappear after a refresh.
+- Sorting by date now uses the client's time zone.
+- Download links no longer break when a file is renamed.
+
+Known issues
+- Side-by-side comparison is not available for video files yet.
+- The dark theme has low contrast on the approval dialog; fix planned for 2.0.1.
+
+Version 1.9 (June 2026)
+- Added two-step sign-in for client accounts.
+- Removed the legacy upload page.
+
+Version 1.8 (March 2026)
+- Accessibility fixes across forms and dialogs.
+- New export of approval history as CSV.

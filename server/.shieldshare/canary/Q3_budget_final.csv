@@ -1,0 +1,9 @@
+department,cost_centre,q3_budget,q3_actual,variance,owner
+Engineering,CC-110,412000,398500,-13500,Platform lead
+Marketing,CC-210,186000,191200,5200,Brand manager
+Sales,CC-310,254000,247900,-6100,Regional director
+Operations,CC-410,139000,141300,2300,Operations manager
+Finance,CC-510,88000,86700,-1300,Finance controller
+People,CC-610,76000,74100,-1900,People partner
+Facilities,CC-710,64000,66800,2800,Facilities lead
+Total,,1219000,1206500,-12500,

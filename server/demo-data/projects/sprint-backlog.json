@@ -1,0 +1,123 @@
+{
+  "note": "Fictional backlog for the Acme Studio demo workspace.",
+  "sprint": {
+    "name": "Sprint 41",
+    "start": "2026-09-14",
+    "end": "2026-09-25",
+    "goal": "Release 2.0 ready for the client pilot"
+  },
+  "items": [
+    {
+      "id": "PORTAL-512",
+      "title": "Side-by-side comparison for images",
+      "type": "feature",
+      "points": 3,
+      "assignee": "Marcus",
+      "status": "done"
+    },
+    {
+      "id": "PORTAL-513",
+      "title": "Password-protected share links",
+      "type": "feature",
+      "points": 8,
+      "assignee": "Lena",
+      "status": "to do"
+    },
+    {
+      "id": "PORTAL-514",
+      "title": "Daily notification summary",
+      "type": "feature",
+      "points": 1,
+      "assignee": "Lena",
+      "status": "in progress"
+    },
+    {
+      "id": "PORTAL-515",
+      "title": "Fix comment loss on last PDF page",
+      "type": "feature",
+      "points": 1,
+      "assignee": "Lena",
+      "status": "to do"
+    },
+    {
+      "id": "PORTAL-516",
+      "title": "Resumable uploads",
+      "type": "chore",
+      "points": 1,
+      "assignee": "Lena",
+      "status": "in progress"
+    },
+    {
+      "id": "PORTAL-517",
+      "title": "Approval comment field",
+      "type": "feature",
+      "points": 3,
+      "assignee": "Lena",
+      "status": "done"
+    },
+    {
+      "id": "PORTAL-518",
+      "title": "Accessibility review of dialogs",
+      "type": "chore",
+      "points": 8,
+      "assignee": "Ada",
+      "status": "done"
+    },
+    {
+      "id": "PORTAL-519",
+      "title": "Export approval history",
+      "type": "feature",
+      "points": 2,
+      "assignee": "Jonas",
+      "status": "in review"
+    },
+    {
+      "id": "PORTAL-520",
+      "title": "Time zone aware sorting",
+      "type": "feature",
+      "points": 5,
+      "assignee": "Marcus",
+      "status": "to do"
+    },
+    {
+      "id": "PORTAL-521",
+      "title": "Dark theme contrast on approval dialog",
+      "type": "feature",
+      "points": 3,
+      "assignee": "Jonas",
+      "status": "in progress"
+    },
+    {
+      "id": "PORTAL-522",
+      "title": "Preview worker retries",
+      "type": "chore",
+      "points": 1,
+      "assignee": "Jonas",
+      "status": "in progress"
+    },
+    {
+      "id": "PORTAL-523",
+      "title": "Audit log filters",
+      "type": "bug",
+      "points": 1,
+      "assignee": "Ada",
+      "status": "done"
+    },
+    {
+      "id": "PORTAL-524",
+      "title": "Rename keeps share links working",
+      "type": "feature",
+      "points": 3,
+      "assignee": "Lena",
+      "status": "done"
+    },
+    {
+      "id": "PORTAL-525",
+      "title": "Mobile project list layout",
+      "type": "feature",
+      "points": 3,
+      "assignee": "Jonas",
+      "status": "to do"
+    }
+  ]
+}

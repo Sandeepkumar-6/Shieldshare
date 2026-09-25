@@ -1,0 +1,13 @@
+Client contracts register (internal)
+Renewal review for Q4. Figures are annual contract values.
+
+Northwind Traders    Master services agreement   ACV 180,000   Renewal 2027-01-31   Owner: Legal
+Contoso Ltd          Support and maintenance     ACV  64,000   Renewal 2026-11-15   Owner: Account management
+Fabrikam Inc         Software licence            ACV 125,000   Renewal 2027-03-01   Owner: Legal
+Tailspin Toys        Pilot agreement             ACV  18,500   Renewal 2026-12-10   Owner: Sales
+Wide World Importers Data processing addendum    ACV       -   Renewal 2027-06-30   Owner: Privacy
+
+Open items
+- Confirm price uplift clause with Northwind before renewal.
+- Contoso asked for a 30-day extension on the support SLA review.
+- Fabrikam licence count to be reconciled against usage report.

@@ -1,0 +1,348 @@
+{
+  "note": "Fictional invoices for the Acme Studio demo workspace.",
+  "currency": "EUR",
+  "invoices": [
+    {
+      "number": "ACME-2026-120",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-08-04",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Brand workshop",
+          "hours": 45,
+          "rate": 95
+        },
+        {
+          "description": "Portal development",
+          "hours": 19,
+          "rate": 110
+        },
+        {
+          "description": "Design sprint",
+          "hours": 9,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-121",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-08-05",
+      "netDays": 45,
+      "lines": [
+        {
+          "description": "Brand workshop",
+          "hours": 50,
+          "rate": 85
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-122",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-09-05",
+      "netDays": 45,
+      "lines": [
+        {
+          "description": "Content migration",
+          "hours": 61,
+          "rate": 95
+        },
+        {
+          "description": "Brand workshop",
+          "hours": 32,
+          "rate": 95
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-123",
+      "client": "Maple Transit",
+      "issued": "2026-07-27",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Maintenance retainer",
+          "hours": 49,
+          "rate": 95
+        },
+        {
+          "description": "Design sprint",
+          "hours": 35,
+          "rate": 85
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-124",
+      "client": "Greenfield Clinic",
+      "issued": "2026-07-20",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Brand workshop",
+          "hours": 20,
+          "rate": 85
+        },
+        {
+          "description": "Portal development",
+          "hours": 40,
+          "rate": 95
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-125",
+      "client": "Maple Transit",
+      "issued": "2026-09-06",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Maintenance retainer",
+          "hours": 28,
+          "rate": 95
+        },
+        {
+          "description": "Content migration",
+          "hours": 19,
+          "rate": 110
+        },
+        {
+          "description": "Portal development",
+          "hours": 11,
+          "rate": 95
+        }
+      ],
+      "status": "overdue"
+    },
+    {
+      "number": "ACME-2026-126",
+      "client": "Harbor Books",
+      "issued": "2026-07-22",
+      "netDays": 45,
+      "lines": [
+        {
+          "description": "Maintenance retainer",
+          "hours": 11,
+          "rate": 85
+        },
+        {
+          "description": "Brand workshop",
+          "hours": 41,
+          "rate": 95
+        }
+      ],
+      "status": "overdue"
+    },
+    {
+      "number": "ACME-2026-127",
+      "client": "Riverside Theatre",
+      "issued": "2026-09-18",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Design sprint",
+          "hours": 46,
+          "rate": 110
+        },
+        {
+          "description": "Brand workshop",
+          "hours": 62,
+          "rate": 85
+        },
+        {
+          "description": "Maintenance retainer",
+          "hours": 39,
+          "rate": 110
+        }
+      ],
+      "status": "overdue"
+    },
+    {
+      "number": "ACME-2026-128",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-07-24",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Brand workshop",
+          "hours": 26,
+          "rate": 85
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-129",
+      "client": "Harbor Books",
+      "issued": "2026-09-16",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Brand workshop",
+          "hours": 19,
+          "rate": 85
+        },
+        {
+          "description": "Design sprint",
+          "hours": 35,
+          "rate": 85
+        },
+        {
+          "description": "Content migration",
+          "hours": 35,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-130",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-07-15",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Content migration",
+          "hours": 55,
+          "rate": 95
+        },
+        {
+          "description": "Brand workshop",
+          "hours": 35,
+          "rate": 110
+        }
+      ],
+      "status": "overdue"
+    },
+    {
+      "number": "ACME-2026-131",
+      "client": "Maple Transit",
+      "issued": "2026-08-14",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Maintenance retainer",
+          "hours": 33,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-132",
+      "client": "Riverside Theatre",
+      "issued": "2026-09-15",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Portal development",
+          "hours": 22,
+          "rate": 85
+        },
+        {
+          "description": "Portal development",
+          "hours": 15,
+          "rate": 95
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-133",
+      "client": "Greenfield Clinic",
+      "issued": "2026-09-26",
+      "netDays": 45,
+      "lines": [
+        {
+          "description": "Content migration",
+          "hours": 32,
+          "rate": 85
+        },
+        {
+          "description": "Design sprint",
+          "hours": 45,
+          "rate": 95
+        }
+      ],
+      "status": "sent"
+    },
+    {
+      "number": "ACME-2026-134",
+      "client": "Greenfield Clinic",
+      "issued": "2026-08-20",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Maintenance retainer",
+          "hours": 55,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-135",
+      "client": "Harbor Books",
+      "issued": "2026-09-24",
+      "netDays": 30,
+      "lines": [
+        {
+          "description": "Portal development",
+          "hours": 49,
+          "rate": 110
+        },
+        {
+          "description": "Portal development",
+          "hours": 19,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-136",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-07-27",
+      "netDays": 14,
+      "lines": [
+        {
+          "description": "Content migration",
+          "hours": 60,
+          "rate": 85
+        },
+        {
+          "description": "Brand workshop",
+          "hours": 6,
+          "rate": 110
+        },
+        {
+          "description": "Design sprint",
+          "hours": 11,
+          "rate": 95
+        }
+      ],
+      "status": "paid"
+    },
+    {
+      "number": "ACME-2026-137",
+      "client": "Oak & Stone Architects",
+      "issued": "2026-08-09",
+      "netDays": 45,
+      "lines": [
+        {
+          "description": "Portal development",
+          "hours": 15,
+          "rate": 110
+        }
+      ],
+      "status": "paid"
+    }
+  ]
+}

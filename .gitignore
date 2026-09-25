@@ -1,16 +1,31 @@
-node_modules/
-server/node_modules/
-
+# Secrets: never commit real environment files
 .env
-*.env
-!*.env.example
-server/.env
+.env.*
+!.env.example
 
+# Dependencies and build output
+node_modules/
+ml-service/.venv/
+ml-service/.venv-signed/
+ml-service/__pycache__/
+ml-service/.pytest_cache/
+dist/
+coverage/
+
+# Uploaded blobs (server STORAGE_DIR)
 server/storage/
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# ML artifacts: regenerate with generate_synthetic.py then train.py (fixed seeds; see README)
+ml-service/data/
+ml-service/models/
 
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
 .DS_Store
 Thumbs.db
+.vscode/
+*.log

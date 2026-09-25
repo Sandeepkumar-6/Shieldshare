@@ -1,11 +1,13 @@
-import mongoose from "mongoose";
-import { env } from "./env.js";
+import mongoose from 'mongoose';
+import { config } from './env.js';
 
-export async function connectDb() {
-  await mongoose.connect(env.mongoUri);
-  console.log(`[db] connected: ${mongoose.connection.name}`);
+mongoose.set('strictQuery', true);
+
+export async function connectDatabase() {
+  await mongoose.connect(config.mongoUri, { serverSelectionTimeoutMS: 5000 });
+  return mongoose.connection;
 }
 
-export async function disconnectDb() {
+export async function disconnectDatabase() {
   await mongoose.disconnect();
 }

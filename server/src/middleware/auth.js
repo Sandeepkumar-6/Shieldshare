@@ -1,28 +1,42 @@
-import jwt from "jsonwebtoken";
-import { env } from "../config/env.js";
-import { User } from "../models/User.js";
-import { HttpError } from "../utils/errors.js";
+import { resolveAccessToken } from '../services/auth.service.js';
+import { errors } from '../utils/AppError.js';
 
-export async function auth(req, _res, next) {
-  try {
-    const header = req.headers.authorization ?? "";
-    const token = header.startsWith("Bearer ") ? header.slice(7) : null;
-    if (!token) throw new HttpError(401, "Authentication required");
-    const payload = jwt.verify(token, env.jwtSecret);
-    const user = await User.findById(payload.sub).lean();
-    if (!user) throw new HttpError(401, "User no longer exists");
-    req.user = user;
-    next();
-  } catch (err) {
-    next(err instanceof HttpError ? err : new HttpError(401, "Invalid or expired token"));
+// Verifies the bearer token, its Session (ACTIVE, unexpired) and tokenVersion, then loads
+// role and status from the database on every request (spec §5).
+export async function authenticate(req, res, next) {
+  const header = req.get('authorization') || '';
+  const [scheme, token] = header.split(' ');
+  if (scheme !== 'Bearer' || !token) {
+    throw errors.unauthenticated();
   }
+
+  const { user, session } = await resolveAccessToken(token);
+  req.user = {
+    id: String(user._id),
+    name: user.name,
+    email: user.email,
+    role: user.role,
+    status: user.status,
+    createdAt: user.createdAt,
+  };
+  req.auth = { sessionId: String(session._id) };
+  next();
 }
 
-export function requireRole(...roles) {
-  return (req, _res, next) => {
-    if (!req.user || !roles.includes(req.user.role)) {
-      return next(new HttpError(403, "You do not have permission to do this"));
+export function requireRole(role) {
+  return function requireRoleMiddleware(req, res, next) {
+    if (!req.user || req.user.role !== role) {
+      throw errors.forbidden();
     }
     next();
   };
+}
+
+// Runs on every write route. A frozen user keeps read-only access (spec §5), and this
+// applies to already-issued tokens because status is read from the database per request.
+export function requireNotFrozen(req, res, next) {
+  if (req.user?.status === 'FROZEN') {
+    throw errors.userFrozen();
+  }
+  next();
 }

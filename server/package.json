@@ -1,25 +1,42 @@
 {
   "name": "shieldshare-server",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "type": "module",
-  "main": "src/index.js",
+  "description": "ShieldShare API: Express + Mongoose",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.12"
+  },
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
-    "test": "node --test test/"
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seed-users.js",
+    "canaries:backfill": "node src/scripts/backfill-canaries.js",
+    "test": "node --test \"../tests/unit/*.test.mjs\" \"../tests/integration/*.test.mjs\"",
+    "test:detection": "node --test \"../tests/unit/*.test.mjs\" \"../tests/integration/phase3*.test.mjs\"",
+    "sim:seed": "node src/scripts/simulator.js seed",
+    "sim:run": "node src/scripts/simulator.js run",
+    "sim:reset": "node src/scripts/simulator.js reset",
+    "test:realtime": "node --test \"../tests/unit/*.test.mjs\" \"../tests/integration/phase4*.test.mjs\""
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
-    "express-rate-limit": "^7.4.0",
-    "helmet": "^8.0.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.8.0",
-    "multer": "^1.4.5-lts.1",
-    "socket.io": "^4.8.0",
-    "zod": "^3.23.8"
+    "@google/genai": "^2.24.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.2",
+    "multer": "^2.4.0",
+    "openai": "^7.23.0",
+    "socket.io": "^4.8.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "socket.io-client": "^4.8.3",
+    "supertest": "^7.3.0"
   }
 }
